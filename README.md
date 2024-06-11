@@ -7,8 +7,8 @@ Task 1 involves setting up a simple web server that can respond to two endpoints
 
 1.  **WSL and Ubuntu Installation**:
 
-    -   Ensure that you have WSL installed on your Windows machine.
-    -   Install Ubuntu from the Microsoft Store.
+    -   Ensure that you have WSL 2 installed on your Windows machine.
+    -   Install Ubuntu 22.04.3 from the Microsoft Store.
 2.  **Install Docker on WSL**:
 
     -   Follow the steps provided in the Appendix A of the assignment to install Docker and Docker Compose on your WSL environment.
@@ -19,12 +19,9 @@ Task 1 involves setting up a simple web server that can respond to two endpoints
 
     -   Create a new directory for your project and navigate into it.
 
-        bash
-
-        Copy code
-
-        `mkdir load_balancer_project
-        cd load_balancer_project`
+        ```bash
+       mkdir load_balancer_project
+       cd load_balancer_project`
 
 2.  **Create the Web Server Code**:
 
