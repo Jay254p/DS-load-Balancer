@@ -19,24 +19,19 @@ Task 1 involves setting up a simple web server that can respond to two endpoints
 
     -   Create a new directory for your project and navigate into it.
 
-        ```bash
-       mkdir load_balancer_project
-       cd load_balancer_project`
-
+      ```bash
+    mkdir load_balancer_project
+    cd load_balancer_project
 2.  **Create the Web Server Code**:
 
     -   Create a file named `server.py` with the following content:
-
-        python
-
-        Copy code
-
-        `from flask import Flask, jsonify
+     ```bash
+        from flask import Flask, jsonify
         import os
 
         app = Flask(__name__)
 
-        # Endpoint /home
+        Endpoint /home
         @app.route('/home', methods=['GET'])
         def home():
             server_id = os.getenv('SERVER_ID', 'unknown')
@@ -45,7 +40,7 @@ Task 1 involves setting up a simple web server that can respond to two endpoints
                 "status": "successful"
             }), 200
 
-        # Endpoint /heartbeat
+        Endpoint /heartbeat
         @app.route('/heartbeat', methods=['GET'])
         def heartbeat():
             return "", 200
@@ -57,9 +52,7 @@ Task 1 involves setting up a simple web server that can respond to two endpoints
 
     -   Create a file named `Dockerfile` with the following content to containerize your server.
 
-        Dockerfile
-
-        Copy code
+         ```bash
 
         `# Use an official Python runtime as a parent image
         FROM python:3.8-slim
@@ -86,11 +79,8 @@ Task 1 involves setting up a simple web server that can respond to two endpoints
 
     -   Create a file named `docker-compose.yml` with the following content to manage multiple instances of your server.
 
-        yaml
-
-        Copy code
-
-        `version: '3'
+       ```bash
+      version: '3'
         services:
           server1:
             build: .
@@ -117,19 +107,15 @@ Task 1 involves setting up a simple web server that can respond to two endpoints
 5.  **Build and Run the Docker Containers**:
 
     -   Execute the following commands to build the Docker images and run the containers.
-
-        bash
-
-        Copy code
-
-        `sudo docker-compose build
+         ```bash
+        sudo docker-compose build
         sudo docker-compose up`
 
 6.  **Testing the Endpoints**:
 
     -   You can now test the endpoints using curl or any HTTP client like Postman.
 
-        bash
+        ```bash
 
         Copy code
 
