@@ -1,35 +1,19 @@
 # DS-load-Balancer
-# Prerequisites
-### 1. Docker: latest [version 20.10.23, build 7155243]
+### Setting Up and Implementing Task 1 Using WSL
 
-    sudo apt-get update
+Task 1 involves setting up a simple web server that can respond to two endpoints (`/home` and `/heartbeat`). This server needs to be containerized using Docker. Here are the steps to accomplish this using WSL (Windows Subsystem for Linux).
 
-    sudo apt-get install \
-        ca-certificates \
-        curl \
-        gnupg \
-        lsb-release
+#### Prerequisites
 
-    sudo mkdir -p /etc/apt/keyrings
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+1.  **WSL and Ubuntu Installation**:
 
-    echo \
-    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    -   Ensure that you have WSL installed on your Windows machine.
+    -   Install Ubuntu from the Microsoft Store.
+2.  **Install Docker on WSL**:
 
-    sudo apt-get update
+    -   Follow the steps provided in the Appendix A of the assignment to install Docker and Docker Compose on your WSL environment.
 
-    sudo apt-get install docker-ce docker-ce-cli containerd.io
-
-### 2. Docker-compose standalone [version v2.15.1]
-    sudo curl -SL https://github.com/docker/compose/releases/download/v2.15.1/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
-    
-    sudo chmod +x /usr/local/bin/docker-compose
-    
-    sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
-
-    
-    #### Step-by-Step Implementation of Task 1
+#### Step-by-Step Implementation of Task 1
 
 1.  **Set Up Your Project Directory**:
 
@@ -160,24 +144,3 @@
         curl http://localhost:5003/heartbeat`
 
         Each `/home` endpoint should return a message indicating the server ID. Each `/heartbeat` endpoint should return an empty response with a 200 status code.
-
-7.  **Create a Makefile**:
-
-    -   Create a file named `Makefile` to automate the build and run process.
-
-        makefile
-
-        Copy code
-
-        `build:
-        	docker-compose build
-
-        up:
-        	docker-compose up
-
-        down:
-        	docker-compose down`
-
-By following these steps, you should be able to set up and run a simple web server that responds to the specified endpoints and is containerized using Docker, all within a WSL environment.
-
-4o
