@@ -1,5 +1,16 @@
 version: '3'
+
 services:
+  load_balancer:
+    build: .
+    container_name: load_balancer
+    ports:
+      - "5000:5000"
+    depends_on:
+      - server1
+      - server2
+      - server3
+
   server1:
     build: .
     container_name: server1
@@ -7,6 +18,7 @@ services:
       - SERVER_ID=1
     ports:
       - "5001:5000"
+
   server2:
     build: .
     container_name: server2
@@ -14,6 +26,7 @@ services:
       - SERVER_ID=2
     ports:
       - "5002:5000"
+
   server3:
     build: .
     container_name: server3
@@ -21,4 +34,5 @@ services:
       - SERVER_ID=3
     ports:
       - "5003:5000"
+
 

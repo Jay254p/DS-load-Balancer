@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, redirect
 import logging
 import os
 from consistent_hashing import ConsistentHashRing
@@ -27,6 +27,11 @@ def log_response_info(response):
 # Initialize consistent hashing ring
 nodes = ["Server1", "Server2", "Server3"]
 hash_ring = ConsistentHashRing(nodes)
+server_ports = {
+    "Server1": "5001",
+    "Server2": "5002",
+    "Server3": "5003"
+}
 
 # Endpoint /home
 @app.route('/home', methods=['GET'])
@@ -86,6 +91,21 @@ def remove_server():
         },
         "status": "successful"
     }), 200
+
+# Endpoint to route requests to the appropriate server
+@app.route('/<path:path>', methods=['GET'])
+def route_request(path):
+    server_id = hash_ring.get_node(request.remote_addr)
+    server_port = server_ports.get(server_id)
+    if server_port:
+        logging.info(f"Routing request for {path} to {server_id}")
+        return redirect(f"http://localhost:{server_port}/{path}", code=307)
+    else:
+        logging.error(f"Server {server_id} not found for routing request")
+        return jsonify({
+            "message": "Server not found",
+            "status": "failed"
+        }), 500
 
 if __name__ == '__main__':
     logging.info("Flask app is starting.")
