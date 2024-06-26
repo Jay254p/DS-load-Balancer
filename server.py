@@ -15,15 +15,6 @@ logging.info("Logging is set up.")
 
 app = Flask(__name__)
 
-@app.before_request
-def log_request_info():
-    logging.info(f"Received request: {request.method} {request.path} from {request.remote_addr}")
-
-@app.after_request
-def log_response_info(response):
-    logging.info(f"Response: {response.status_code} {response.get_data(as_text=True)}")
-    return response
-
 # Initialize consistent hashing ring
 nodes = ["Server1", "Server2", "Server3"]
 hash_ring = ConsistentHashRing(nodes)
@@ -33,10 +24,14 @@ server_ports = {
     "Server3": "5003"
 }
 
+# Helper function to get server ID based on IP address
+def get_server_id():
+    return hash_ring.get_node(request.remote_addr)
+
 # Endpoint /home
 @app.route('/home', methods=['GET'])
 def home():
-    server_id = hash_ring.get_node(str(request.remote_addr))
+    server_id = get_server_id()
     return jsonify({
         "message": f"Hello from {server_id}",
         "status": "successful"
@@ -45,7 +40,11 @@ def home():
 # Endpoint /heartbeat
 @app.route('/heartbeat', methods=['GET'])
 def heartbeat():
-    return "", 200
+    server_id = get_server_id()
+    return jsonify({
+        "message": f"Heartbeat from {server_id}",
+        "status": "successful"
+    }), 200
 
 # Endpoint /rep
 @app.route('/rep', methods=['GET'])
@@ -92,20 +91,75 @@ def remove_server():
         "status": "successful"
     }), 200
 
-# Endpoint to route requests to the appropriate server
+# Route requests to the appropriate server based on consistent hashing
 @app.route('/<path:path>', methods=['GET'])
 def route_request(path):
     server_id = hash_ring.get_node(request.remote_addr)
     server_port = server_ports.get(server_id)
+    
     if server_port:
         logging.info(f"Routing request for {path} to {server_id}")
-        return redirect(f"http://localhost:{server_port}/{path}", code=307)
+        # Construct the redirect URL based on the server's port
+        redirect_url = f"http://localhost:{server_port}/{path}"
+        return redirect(redirect_url, code=307)
     else:
         logging.error(f"Server {server_id} not found for routing request")
         return jsonify({
             "message": "Server not found",
             "status": "failed"
         }), 500
+
+
+# Route requests to Server1
+@app.route('/server1', methods=['GET'])
+def server1_info():
+    server_id = "Server1"
+    server_port = server_ports.get(server_id)
+    if server_port:
+        return jsonify({
+            "message": f"Information from {server_id}",
+            "port": server_port,
+            "status": "successful"
+        }), 200
+    else:
+        return jsonify({
+            "message": f"Server {server_id} not found",
+            "status": "failed"
+        }), 404
+
+# Route requests to Server2
+@app.route('/server2', methods=['GET'])
+def server2_info():
+    server_id = "Server2"
+    server_port = server_ports.get(server_id)
+    if server_port:
+        return jsonify({
+            "message": f"Information from {server_id}",
+            "port": server_port,
+            "status": "successful"
+        }), 200
+    else:
+        return jsonify({
+            "message": f"Server {server_id} not found",
+            "status": "failed"
+        }), 404
+
+# Route requests to Server3
+@app.route('/server3', methods=['GET'])
+def server3_info():
+    server_id = "Server3"
+    server_port = server_ports.get(server_id)
+    if server_port:
+        return jsonify({
+            "message": f"Information from {server_id}",
+            "port": server_port,
+            "status": "successful"
+        }), 200
+    else:
+        return jsonify({
+            "message": f"Server {server_id} not found",
+            "status": "failed"
+        }), 404
 
 if __name__ == '__main__':
     logging.info("Flask app is starting.")
