@@ -1,11 +1,14 @@
-2024-06-24 20:21:28,543 - INFO - Logging is set up.
-2024-06-24 20:21:28,546 - INFO - Flask app is starting.
-2024-06-24 20:21:28,558 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://172.23.184.68:5000
-2024-06-24 20:21:28,558 - INFO - [33mPress CTRL+C to quit[0m
-2024-06-24 20:21:48,823 - INFO - Received request: GET /home from 127.0.0.1
-2024-06-24 20:21:48,824 - INFO - Response: 200 {"message":"Hello from Server2","status":"successful"}
-
-2024-06-24 20:21:48,826 - INFO - 127.0.0.1 - - [24/Jun/2024 20:21:48] "GET /home HTTP/1.1" 200 -
+2024-07-01 11:55:42,474 - INFO - Logging is set up.
+2024-07-01 11:55:42,476 - INFO - Adding node: server1
+2024-07-01 11:55:42,476 - INFO - Added replica 0 for node server1 with key 155
+2024-07-01 11:55:42,477 - INFO - Added replica 1 for node server1 with key 110
+2024-07-01 11:55:42,477 - INFO - Added replica 2 for node server1 with key 331
+2024-07-01 11:55:42,477 - INFO - Adding node: server2
+2024-07-01 11:55:42,478 - INFO - Added replica 0 for node server2 with key 53
+2024-07-01 11:55:42,478 - INFO - Added replica 1 for node server2 with key 385
+2024-07-01 11:55:42,479 - INFO - Added replica 2 for node server2 with key 23
+2024-07-01 11:55:42,479 - INFO - Adding node: server3
+2024-07-01 11:55:42,479 - INFO - Added replica 0 for node server3 with key 157
+2024-07-01 11:55:42,480 - INFO - Added replica 1 for node server3 with key 108
+2024-07-01 11:55:42,480 - INFO - Added replica 2 for node server3 with key 14
+2024-07-01 11:55:42,482 - INFO - Flask app is starting.
