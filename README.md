@@ -36,11 +36,6 @@ The purpose of this project is to demonstrate the implementation of a load balan
 
 ---
 
-
-**Distributed Queue with Sharding Diagram**:
-![image](https://github.com/alexwafula/Customizable_Load_Balancerr/assets/136974351/43ed11fc-ed87-440a-9143-7cd7e113b919)
-
-
 ### Assumptions
 
 1. **Network Reliability**: Assumes a reliable network with minimal packet loss. The system is designed to handle transient network issues, but prolonged network failures could affect performance.
@@ -80,7 +75,7 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 2. **Python**: For implementing the server, load balancer, and consistent hash map.
 3. **Flask**: For handling HTTP requests within the server and load balancer.
 4. **Git**: For version control and managing the project repository.
-5. **Miniconda**: This is a free minimal installer for Anaconda with minimum packages that allows one to use virtual environments. It is lightweight and quick.
+
 
 ---
 
@@ -175,20 +170,6 @@ We implemented the load balancer container using Python and Flask, leveraging th
 **Deployment:**
 Deploy the load balancer container using the provided Dockerfile, Docker-compose file, and Makefile. Ensure that the load balancer is exposed on port 5000 to accept incoming HTTP requests.
 
-**Task 4: Analysis**
-
-**Overview:**
-Task 4 involves testing and analyzing the performance of the load balancer implementation in different scenarios, including load distribution among server containers and recovery from server container failure.
-
-**Experiments:**
-- **A-1:** Launch 10000 async requests on N = 3 server containers and report the request count handled by each server instance. Below is a snapshot of the result
-  ![image](https://github.com/alexwafula/Customizable_Load_Balancerr/assets/91899603/d0d6956d-4d32-48ef-a02d-f108d8887771)
-
-- **A-2:** Increment N from 2 to 6 and launch 10000 requests on each increment. Report the average load of the servers at each run. Below is a snapshot of the result
-  ![image](https://github.com/alexwafula/Customizable_Load_Balancerr/assets/91899603/fc842e83-eb33-4bb2-954b-67f9141ede24)
-
-- **A-3:** Test all endpoints of the load balancer and demonstrate that it spawns a new instance quickly in case of server failure.
-- **A-4:** Modify the hash functions and report the observations from A-1 and A-2.
 
 **Conclusion:**
 Overall, the load balancer implementation effectively distributes the load among server containers and demonstrates scalability and fault tolerance. The analysis provides insights into the performance and behavior of the load balancer in various scenarios, contributing to the understanding of distributed systems and load balancing techniques. The other testing images are found in rm_responses.json.
