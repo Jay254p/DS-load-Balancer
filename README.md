@@ -85,7 +85,7 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
    ```sh
    git clone https://github.com/Ian-Mutuge/DS-load-Balancer
-   cd Customizable_Load_Balancerr
+   cd DS-load-Balancer
    ```
 
 2. **Build Docker Images**:
