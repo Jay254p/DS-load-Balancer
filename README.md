@@ -84,7 +84,7 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 1. **Clone the Repository**:
 
    ```sh
-   git clone https://github.com/alexwafula/Customizable_Load_Balancerr.git
+   git clone https://github.com/Ian-Mutuge/DS-load-Balancer
    cd Customizable_Load_Balancerr
    ```
 
