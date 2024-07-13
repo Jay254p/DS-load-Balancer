@@ -12,3 +12,234 @@
 2024-07-01 11:55:42,480 - INFO - Added replica 1 for node server3 with key 108
 2024-07-01 11:55:42,480 - INFO - Added replica 2 for node server3 with key 14
 2024-07-01 11:55:42,482 - INFO - Flask app is starting.
+2024-07-13 19:17:06,182 - INFO - Logging is set up.
+2024-07-13 19:17:06,184 - INFO - Adding node: server1
+2024-07-13 19:17:06,185 - INFO - Added replica 0 for node server1 with key 155
+2024-07-13 19:17:06,185 - INFO - Added replica 1 for node server1 with key 110
+2024-07-13 19:17:06,186 - INFO - Added replica 2 for node server1 with key 331
+2024-07-13 19:17:06,186 - INFO - Adding node: server2
+2024-07-13 19:17:06,186 - INFO - Added replica 0 for node server2 with key 53
+2024-07-13 19:17:06,187 - INFO - Added replica 1 for node server2 with key 385
+2024-07-13 19:17:06,187 - INFO - Added replica 2 for node server2 with key 23
+2024-07-13 19:17:06,187 - INFO - Adding node: server3
+2024-07-13 19:17:06,188 - INFO - Added replica 0 for node server3 with key 157
+2024-07-13 19:17:06,188 - INFO - Added replica 1 for node server3 with key 108
+2024-07-13 19:17:06,189 - INFO - Added replica 2 for node server3 with key 14
+2024-07-13 19:17:06,190 - INFO - Flask app is starting.
+2024-07-13 19:17:43,024 - INFO - Logging is set up.
+2024-07-13 19:17:43,026 - INFO - Adding node: server1
+2024-07-13 19:17:43,026 - INFO - Added replica 0 for node server1 with key 155
+2024-07-13 19:17:43,026 - INFO - Added replica 1 for node server1 with key 110
+2024-07-13 19:17:43,027 - INFO - Added replica 2 for node server1 with key 331
+2024-07-13 19:17:43,027 - INFO - Adding node: server2
+2024-07-13 19:17:43,028 - INFO - Added replica 0 for node server2 with key 53
+2024-07-13 19:17:43,028 - INFO - Added replica 1 for node server2 with key 385
+2024-07-13 19:17:43,028 - INFO - Added replica 2 for node server2 with key 23
+2024-07-13 19:17:43,029 - INFO - Adding node: server3
+2024-07-13 19:17:43,029 - INFO - Added replica 0 for node server3 with key 157
+2024-07-13 19:17:43,029 - INFO - Added replica 1 for node server3 with key 108
+2024-07-13 19:17:43,030 - INFO - Added replica 2 for node server3 with key 14
+2024-07-13 19:17:43,032 - INFO - Flask app is starting.
+2024-07-13 19:17:43,044 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.23.183.222:5000
+2024-07-13 19:17:43,045 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-13 19:18:02,798 - INFO - Received request: GET /home from 127.0.0.1
+2024-07-13 19:18:02,799 - INFO - Key 127.0.0.1 (hashed to 214) is mapped to node server1
+2024-07-13 19:18:02,799 - INFO - Response: 200 {"message":"Hello from server1","status":"successful"}
+
+2024-07-13 19:18:02,800 - INFO - 127.0.0.1 - - [13/Jul/2024 19:18:02] "GET /home HTTP/1.1" 200 -
+2024-07-13 19:18:04,628 - INFO - Received request: GET /home from 127.0.0.1
+2024-07-13 19:18:04,629 - INFO - Key 127.0.0.1 (hashed to 214) is mapped to node server1
+2024-07-13 19:18:04,629 - INFO - Response: 200 {"message":"Hello from server1","status":"successful"}
+
+2024-07-13 19:18:04,630 - INFO - 127.0.0.1 - - [13/Jul/2024 19:18:04] "GET /home HTTP/1.1" 200 -
+2024-07-13 19:18:05,570 - INFO - Received request: GET /home from 127.0.0.1
+2024-07-13 19:18:05,570 - INFO - Key 127.0.0.1 (hashed to 214) is mapped to node server1
+2024-07-13 19:18:05,571 - INFO - Response: 200 {"message":"Hello from server1","status":"successful"}
+
+2024-07-13 19:18:05,571 - INFO - 127.0.0.1 - - [13/Jul/2024 19:18:05] "GET /home HTTP/1.1" 200 -
+2024-07-13 19:18:06,321 - INFO - Received request: GET /home from 127.0.0.1
+2024-07-13 19:18:06,322 - INFO - Key 127.0.0.1 (hashed to 214) is mapped to node server1
+2024-07-13 19:18:06,322 - INFO - Response: 200 {"message":"Hello from server1","status":"successful"}
+
+2024-07-13 19:18:06,323 - INFO - 127.0.0.1 - - [13/Jul/2024 19:18:06] "GET /home HTTP/1.1" 200 -
+2024-07-13 19:18:07,068 - INFO - Received request: GET /home from 127.0.0.1
+2024-07-13 19:18:07,069 - INFO - Key 127.0.0.1 (hashed to 214) is mapped to node server1
+2024-07-13 19:18:07,069 - INFO - Response: 200 {"message":"Hello from server1","status":"successful"}
+
+2024-07-13 19:18:07,070 - INFO - 127.0.0.1 - - [13/Jul/2024 19:18:07] "GET /home HTTP/1.1" 200 -
+2024-07-13 19:18:07,957 - INFO - Received request: GET /home from 127.0.0.1
+2024-07-13 19:18:07,958 - INFO - Key 127.0.0.1 (hashed to 214) is mapped to node server1
+2024-07-13 19:18:07,958 - INFO - Response: 200 {"message":"Hello from server1","status":"successful"}
+
+2024-07-13 19:18:07,959 - INFO - 127.0.0.1 - - [13/Jul/2024 19:18:07] "GET /home HTTP/1.1" 200 -
+2024-07-13 19:20:12,517 - INFO - Logging is set up.
+2024-07-13 19:20:12,519 - INFO - Adding node: server1
+2024-07-13 19:20:12,519 - INFO - Hashed key server1:0 to 155
+2024-07-13 19:20:12,519 - INFO - Added replica 0 for node server1 with key 155
+2024-07-13 19:20:12,520 - INFO - Hashed key server1:1 to 110
+2024-07-13 19:20:12,520 - INFO - Added replica 1 for node server1 with key 110
+2024-07-13 19:20:12,520 - INFO - Hashed key server1:2 to 331
+2024-07-13 19:20:12,521 - INFO - Added replica 2 for node server1 with key 331
+2024-07-13 19:20:12,521 - INFO - Adding node: server2
+2024-07-13 19:20:12,521 - INFO - Hashed key server2:0 to 53
+2024-07-13 19:20:12,522 - INFO - Added replica 0 for node server2 with key 53
+2024-07-13 19:20:12,522 - INFO - Hashed key server2:1 to 385
+2024-07-13 19:20:12,522 - INFO - Added replica 1 for node server2 with key 385
+2024-07-13 19:20:12,523 - INFO - Hashed key server2:2 to 23
+2024-07-13 19:20:12,523 - INFO - Added replica 2 for node server2 with key 23
+2024-07-13 19:20:12,523 - INFO - Adding node: server3
+2024-07-13 19:20:12,524 - INFO - Hashed key server3:0 to 157
+2024-07-13 19:20:12,524 - INFO - Added replica 0 for node server3 with key 157
+2024-07-13 19:20:12,524 - INFO - Hashed key server3:1 to 108
+2024-07-13 19:20:12,525 - INFO - Added replica 1 for node server3 with key 108
+2024-07-13 19:20:12,525 - INFO - Hashed key server3:2 to 14
+2024-07-13 19:20:12,526 - INFO - Added replica 2 for node server3 with key 14
+2024-07-13 19:20:12,528 - INFO - Flask app is starting.
+2024-07-13 19:20:12,535 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.23.183.222:5000
+2024-07-13 19:20:12,535 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-13 19:22:51,582 - INFO - Received request: GET /home from 127.0.0.1
+2024-07-13 19:22:51,583 - INFO - Hashed key 127.0.0.1 to 214
+2024-07-13 19:22:51,584 - INFO - Key 127.0.0.1 (hashed to 214) is mapped to node server1
+2024-07-13 19:22:51,584 - INFO - Sorted keys: [14, 23, 53, 108, 110, 155, 157, 331, 385]
+2024-07-13 19:22:51,586 - INFO - Response: 200 {"message":"Hello from server1","status":"successful"}
+
+2024-07-13 19:22:51,587 - INFO - 127.0.0.1 - - [13/Jul/2024 19:22:51] "GET /home HTTP/1.1" 200 -
+2024-07-13 19:22:53,277 - INFO - Received request: GET /home from 127.0.0.1
+2024-07-13 19:22:53,278 - INFO - Hashed key 127.0.0.1 to 214
+2024-07-13 19:22:53,278 - INFO - Key 127.0.0.1 (hashed to 214) is mapped to node server1
+2024-07-13 19:22:53,279 - INFO - Sorted keys: [14, 23, 53, 108, 110, 155, 157, 331, 385]
+2024-07-13 19:22:53,279 - INFO - Response: 200 {"message":"Hello from server1","status":"successful"}
+
+2024-07-13 19:22:53,280 - INFO - 127.0.0.1 - - [13/Jul/2024 19:22:53] "GET /home HTTP/1.1" 200 -
+2024-07-13 19:22:54,144 - INFO - Received request: GET /home from 127.0.0.1
+2024-07-13 19:22:54,145 - INFO - Hashed key 127.0.0.1 to 214
+2024-07-13 19:22:54,145 - INFO - Key 127.0.0.1 (hashed to 214) is mapped to node server1
+2024-07-13 19:22:54,146 - INFO - Sorted keys: [14, 23, 53, 108, 110, 155, 157, 331, 385]
+2024-07-13 19:22:54,147 - INFO - Response: 200 {"message":"Hello from server1","status":"successful"}
+
+2024-07-13 19:22:54,148 - INFO - 127.0.0.1 - - [13/Jul/2024 19:22:54] "GET /home HTTP/1.1" 200 -
+2024-07-13 19:22:54,746 - INFO - Received request: GET /home from 127.0.0.1
+2024-07-13 19:22:54,747 - INFO - Hashed key 127.0.0.1 to 214
+2024-07-13 19:22:54,747 - INFO - Key 127.0.0.1 (hashed to 214) is mapped to node server1
+2024-07-13 19:22:54,748 - INFO - Sorted keys: [14, 23, 53, 108, 110, 155, 157, 331, 385]
+2024-07-13 19:22:54,748 - INFO - Response: 200 {"message":"Hello from server1","status":"successful"}
+
+2024-07-13 19:22:54,749 - INFO - 127.0.0.1 - - [13/Jul/2024 19:22:54] "GET /home HTTP/1.1" 200 -
+2024-07-13 19:22:55,346 - INFO - Received request: GET /home from 127.0.0.1
+2024-07-13 19:22:55,347 - INFO - Hashed key 127.0.0.1 to 214
+2024-07-13 19:22:55,347 - INFO - Key 127.0.0.1 (hashed to 214) is mapped to node server1
+2024-07-13 19:22:55,348 - INFO - Sorted keys: [14, 23, 53, 108, 110, 155, 157, 331, 385]
+2024-07-13 19:22:55,348 - INFO - Response: 200 {"message":"Hello from server1","status":"successful"}
+
+2024-07-13 19:22:55,349 - INFO - 127.0.0.1 - - [13/Jul/2024 19:22:55] "GET /home HTTP/1.1" 200 -
+2024-07-13 19:22:55,897 - INFO - Received request: GET /home from 127.0.0.1
+2024-07-13 19:22:55,898 - INFO - Hashed key 127.0.0.1 to 214
+2024-07-13 19:22:55,898 - INFO - Key 127.0.0.1 (hashed to 214) is mapped to node server1
+2024-07-13 19:22:55,899 - INFO - Sorted keys: [14, 23, 53, 108, 110, 155, 157, 331, 385]
+2024-07-13 19:22:55,900 - INFO - Response: 200 {"message":"Hello from server1","status":"successful"}
+
+2024-07-13 19:22:55,900 - INFO - 127.0.0.1 - - [13/Jul/2024 19:22:55] "GET /home HTTP/1.1" 200 -
+2024-07-13 19:22:56,480 - INFO - Received request: GET /home from 127.0.0.1
+2024-07-13 19:22:56,481 - INFO - Hashed key 127.0.0.1 to 214
+2024-07-13 19:22:56,481 - INFO - Key 127.0.0.1 (hashed to 214) is mapped to node server1
+2024-07-13 19:22:56,482 - INFO - Sorted keys: [14, 23, 53, 108, 110, 155, 157, 331, 385]
+2024-07-13 19:22:56,482 - INFO - Response: 200 {"message":"Hello from server1","status":"successful"}
+
+2024-07-13 19:22:56,483 - INFO - 127.0.0.1 - - [13/Jul/2024 19:22:56] "GET /home HTTP/1.1" 200 -
+2024-07-13 19:22:57,176 - INFO - Received request: GET /home from 127.0.0.1
+2024-07-13 19:22:57,176 - INFO - Hashed key 127.0.0.1 to 214
+2024-07-13 19:22:57,177 - INFO - Key 127.0.0.1 (hashed to 214) is mapped to node server1
+2024-07-13 19:22:57,177 - INFO - Sorted keys: [14, 23, 53, 108, 110, 155, 157, 331, 385]
+2024-07-13 19:22:57,178 - INFO - Response: 200 {"message":"Hello from server1","status":"successful"}
+
+2024-07-13 19:22:57,178 - INFO - 127.0.0.1 - - [13/Jul/2024 19:22:57] "GET /home HTTP/1.1" 200 -
+2024-07-13 19:22:57,782 - INFO - Received request: GET /home from 127.0.0.1
+2024-07-13 19:22:57,783 - INFO - Hashed key 127.0.0.1 to 214
+2024-07-13 19:22:57,784 - INFO - Key 127.0.0.1 (hashed to 214) is mapped to node server1
+2024-07-13 19:22:57,784 - INFO - Sorted keys: [14, 23, 53, 108, 110, 155, 157, 331, 385]
+2024-07-13 19:22:57,785 - INFO - Response: 200 {"message":"Hello from server1","status":"successful"}
+
+2024-07-13 19:22:57,786 - INFO - 127.0.0.1 - - [13/Jul/2024 19:22:57] "GET /home HTTP/1.1" 200 -
+2024-07-13 19:22:58,762 - INFO - Received request: GET /home from 127.0.0.1
+2024-07-13 19:22:58,763 - INFO - Hashed key 127.0.0.1 to 214
+2024-07-13 19:22:58,764 - INFO - Key 127.0.0.1 (hashed to 214) is mapped to node server1
+2024-07-13 19:22:58,764 - INFO - Sorted keys: [14, 23, 53, 108, 110, 155, 157, 331, 385]
+2024-07-13 19:22:58,768 - INFO - Response: 200 {"message":"Hello from server1","status":"successful"}
+
+2024-07-13 19:22:58,768 - INFO - 127.0.0.1 - - [13/Jul/2024 19:22:58] "GET /home HTTP/1.1" 200 -
+2024-07-13 19:40:30,771 - INFO - Logging is set up.
+2024-07-13 19:40:30,773 - INFO - Adding node: server1
+2024-07-13 19:40:30,773 - INFO - Hashed key server1:0 to 155
+2024-07-13 19:40:30,774 - INFO - Added replica 0 for node server1 with key 155
+2024-07-13 19:40:30,774 - INFO - Hashed key server1:1 to 110
+2024-07-13 19:40:30,774 - INFO - Added replica 1 for node server1 with key 110
+2024-07-13 19:40:30,775 - INFO - Hashed key server1:2 to 331
+2024-07-13 19:40:30,775 - INFO - Added replica 2 for node server1 with key 331
+2024-07-13 19:40:30,776 - INFO - Adding node: server2
+2024-07-13 19:40:30,776 - INFO - Hashed key server2:0 to 53
+2024-07-13 19:40:30,777 - INFO - Added replica 0 for node server2 with key 53
+2024-07-13 19:40:30,777 - INFO - Hashed key server2:1 to 385
+2024-07-13 19:40:30,777 - INFO - Added replica 1 for node server2 with key 385
+2024-07-13 19:40:30,778 - INFO - Hashed key server2:2 to 23
+2024-07-13 19:40:30,778 - INFO - Added replica 2 for node server2 with key 23
+2024-07-13 19:40:30,779 - INFO - Adding node: server3
+2024-07-13 19:40:30,779 - INFO - Hashed key server3:0 to 157
+2024-07-13 19:40:30,779 - INFO - Added replica 0 for node server3 with key 157
+2024-07-13 19:40:30,780 - INFO - Hashed key server3:1 to 108
+2024-07-13 19:40:30,780 - INFO - Added replica 1 for node server3 with key 108
+2024-07-13 19:40:30,781 - INFO - Hashed key server3:2 to 14
+2024-07-13 19:40:30,781 - INFO - Added replica 2 for node server3 with key 14
+2024-07-13 19:40:30,783 - INFO - Flask app is starting.
+2024-07-13 19:40:30,791 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.23.183.222:5000
+2024-07-13 19:40:30,791 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-13 19:41:36,211 - INFO - Received request: GET /home from 127.0.0.1
+2024-07-13 19:41:36,212 - INFO - Hashed key curl/7.81.0:1720888896 to 4
+2024-07-13 19:41:36,212 - INFO - Key curl/7.81.0:1720888896 (hashed to 4) is mapped to node server3
+2024-07-13 19:41:36,212 - INFO - Sorted keys: [14, 23, 53, 108, 110, 155, 157, 331, 385]
+2024-07-13 19:41:36,213 - INFO - Response: 200 {"message":"Hello from server3","status":"successful"}
+
+2024-07-13 19:41:36,213 - INFO - 127.0.0.1 - - [13/Jul/2024 19:41:36] "GET /home HTTP/1.1" 200 -
+2024-07-13 19:41:37,842 - INFO - Received request: GET /home from 127.0.0.1
+2024-07-13 19:41:37,843 - INFO - Hashed key curl/7.81.0:1720888897 to 256
+2024-07-13 19:41:37,844 - INFO - Key curl/7.81.0:1720888897 (hashed to 256) is mapped to node server1
+2024-07-13 19:41:37,844 - INFO - Sorted keys: [14, 23, 53, 108, 110, 155, 157, 331, 385]
+2024-07-13 19:41:37,844 - INFO - Response: 200 {"message":"Hello from server1","status":"successful"}
+
+2024-07-13 19:41:37,845 - INFO - 127.0.0.1 - - [13/Jul/2024 19:41:37] "GET /home HTTP/1.1" 200 -
+2024-07-13 19:41:43,189 - INFO - Received request: GET /home from 127.0.0.1
+2024-07-13 19:41:43,190 - INFO - Hashed key curl/7.81.0:1720888903 to 377
+2024-07-13 19:41:43,190 - INFO - Key curl/7.81.0:1720888903 (hashed to 377) is mapped to node server2
+2024-07-13 19:41:43,191 - INFO - Sorted keys: [14, 23, 53, 108, 110, 155, 157, 331, 385]
+2024-07-13 19:41:43,191 - INFO - Response: 200 {"message":"Hello from server2","status":"successful"}
+
+2024-07-13 19:41:43,192 - INFO - 127.0.0.1 - - [13/Jul/2024 19:41:43] "GET /home HTTP/1.1" 200 -
+2024-07-13 19:41:44,482 - INFO - Received request: GET /home from 127.0.0.1
+2024-07-13 19:41:44,482 - INFO - Hashed key curl/7.81.0:1720888904 to 38
+2024-07-13 19:41:44,483 - INFO - Key curl/7.81.0:1720888904 (hashed to 38) is mapped to node server2
+2024-07-13 19:41:44,483 - INFO - Sorted keys: [14, 23, 53, 108, 110, 155, 157, 331, 385]
+2024-07-13 19:41:44,484 - INFO - Response: 200 {"message":"Hello from server2","status":"successful"}
+
+2024-07-13 19:41:44,484 - INFO - 127.0.0.1 - - [13/Jul/2024 19:41:44] "GET /home HTTP/1.1" 200 -
+2024-07-13 19:41:45,638 - INFO - Received request: GET /home from 127.0.0.1
+2024-07-13 19:41:45,639 - INFO - Hashed key curl/7.81.0:1720888905 to 180
+2024-07-13 19:41:45,640 - INFO - Key curl/7.81.0:1720888905 (hashed to 180) is mapped to node server1
+2024-07-13 19:41:45,640 - INFO - Sorted keys: [14, 23, 53, 108, 110, 155, 157, 331, 385]
+2024-07-13 19:41:45,641 - INFO - Response: 200 {"message":"Hello from server1","status":"successful"}
+
+2024-07-13 19:41:45,642 - INFO - 127.0.0.1 - - [13/Jul/2024 19:41:45] "GET /home HTTP/1.1" 200 -
+2024-07-13 19:41:46,460 - INFO - Received request: GET /home from 127.0.0.1
+2024-07-13 19:41:46,461 - INFO - Hashed key curl/7.81.0:1720888906 to 164
+2024-07-13 19:41:46,462 - INFO - Key curl/7.81.0:1720888906 (hashed to 164) is mapped to node server1
+2024-07-13 19:41:46,463 - INFO - Sorted keys: [14, 23, 53, 108, 110, 155, 157, 331, 385]
+2024-07-13 19:41:46,464 - INFO - Response: 200 {"message":"Hello from server1","status":"successful"}
+
+2024-07-13 19:41:46,464 - INFO - 127.0.0.1 - - [13/Jul/2024 19:41:46] "GET /home HTTP/1.1" 200 -
