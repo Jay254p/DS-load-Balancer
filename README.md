@@ -167,15 +167,15 @@ We implemented the load balancer container using Python and Flask, leveraging th
 - `/rm`: Removes server instances to scale down with decreasing client or system maintenance.
 - `/<path>`: Routes client requests to a server replica as scheduled by the consistent hashing algorithm.
 
-**Task 4: Testing loadbalaner and endpoints**
+##
+## Task 4: Testing loadbalaner and endpoints**
 
 - This task was mainly to test endpoints and the load balancer.
 
-
-**10,000 async requests**
+## 10,000 async requests
 This script performs an analysis of request distribution among different server instances by making multiple asynchronous HTTP GET requests to a local server endpoint and visualizing the results.
 
-## What the Script Does
+**What the Script Does**
 
 1. **Fetches Data**: 
    - Makes 10,000 asynchronous HTTP GET requests to `http://localhost:5000/home`.
@@ -189,7 +189,7 @@ This script performs an analysis of request distribution among different server 
    - Creates a bar chart that shows the number of requests handled by each server.
    - Saves the bar chart as an image file named `request_distribution_changed_function.png`.
 
-## Requirements
+**Requirements**
 
 Make sure you have Python 3.7+ installed along with the following packages:
 
@@ -201,7 +201,7 @@ Make sure you have Python 3.7+ installed along with the following packages:
 python3 ascyn.py
 ```
 
-## Results:
+**Results:**
 
 ![10,000 async requests](/request_distribution.png)
 
@@ -216,8 +216,8 @@ The total number of requests handled by all three servers is:
 
 
 
-**N=2 to 6 increments**
-## What the Script Does
+## N=2 to 6 increments
+**What the Script Does**
 
 1. **Measure Server Load**:
    - Sends 10,000 asynchronous HTTP GET requests to `http://localhost:5000/home`.
@@ -238,7 +238,7 @@ The total number of requests handled by all three servers is:
    - Creates a plot showing the average number of requests per server and the average number of failed requests.
    - Saves the plot as `average_server_load_and_failed_requests.png`.
 
-## Results:
+**Results:**
 ![Increment Results](/average_server_load_and_failed_requests.png)
 For 2 servers (server1 and server2), server1 handled 3808 requests and server2 handled 1597 requests.
 With 3 servers (server1, server2, and server3), the distribution changed where server1 handled 3273 requests, server2 handled 2682 requests, and server3 handled 4045 requests.
