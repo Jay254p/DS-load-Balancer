@@ -10,6 +10,9 @@ services:
       - server1
       - server2
       - server3
+      - server4  
+      - server5  
+      - server6  
 
   server1:
     build: .
@@ -28,3 +31,21 @@ services:
     container_name: server3
     environment:
       - SERVER_ID=3
+
+  server4:
+    build: .
+    container_name: server4
+    environment:
+      - SERVER_ID=4
+
+  server5:
+    build: .
+    container_name: server5
+    environment:
+      - SERVER_ID=5
+
+  server6:
+    build: .
+    container_name: server6
+    environment:
+      - SERVER_ID=6

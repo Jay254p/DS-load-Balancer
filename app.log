@@ -243,3 +243,26 @@
 2024-07-13 19:41:46,464 - INFO - Response: 200 {"message":"Hello from server1","status":"successful"}
 
 2024-07-13 19:41:46,464 - INFO - 127.0.0.1 - - [13/Jul/2024 19:41:46] "GET /home HTTP/1.1" 200 -
+2024-07-18 19:27:16,111 - INFO - Logging is set up.
+2024-07-18 19:27:16,113 - INFO - Adding node: server1
+2024-07-18 19:27:16,113 - INFO - Hashed key server1:0 to 155
+2024-07-18 19:27:16,113 - INFO - Added replica 0 for node server1 with key 155
+2024-07-18 19:27:16,113 - INFO - Hashed key server1:1 to 110
+2024-07-18 19:27:16,113 - INFO - Added replica 1 for node server1 with key 110
+2024-07-18 19:27:16,113 - INFO - Hashed key server1:2 to 331
+2024-07-18 19:27:16,113 - INFO - Added replica 2 for node server1 with key 331
+2024-07-18 19:27:16,113 - INFO - Adding node: server2
+2024-07-18 19:27:16,113 - INFO - Hashed key server2:0 to 53
+2024-07-18 19:27:16,113 - INFO - Added replica 0 for node server2 with key 53
+2024-07-18 19:27:16,113 - INFO - Hashed key server2:1 to 385
+2024-07-18 19:27:16,113 - INFO - Added replica 1 for node server2 with key 385
+2024-07-18 19:27:16,113 - INFO - Hashed key server2:2 to 23
+2024-07-18 19:27:16,113 - INFO - Added replica 2 for node server2 with key 23
+2024-07-18 19:27:16,113 - INFO - Adding node: server3
+2024-07-18 19:27:16,113 - INFO - Hashed key server3:0 to 157
+2024-07-18 19:27:16,113 - INFO - Added replica 0 for node server3 with key 157
+2024-07-18 19:27:16,113 - INFO - Hashed key server3:1 to 108
+2024-07-18 19:27:16,113 - INFO - Added replica 1 for node server3 with key 108
+2024-07-18 19:27:16,113 - INFO - Hashed key server3:2 to 14
+2024-07-18 19:27:16,113 - INFO - Added replica 2 for node server3 with key 14
+2024-07-18 19:27:16,115 - INFO - Flask app is starting.
