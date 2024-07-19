@@ -72,7 +72,6 @@ class ConsistentHashRing:
         logging.info(f"Hashed key {key} to {hash_val}")
         return hash_val
 
-# Initialize consistent hashing ring
 nodes = ["server1", "server2", "server3"]
 hash_ring = ConsistentHashRing(nodes)
 server_ports = {
