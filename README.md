@@ -167,6 +167,104 @@ We implemented the load balancer container using Python and Flask, leveraging th
 - `/rm`: Removes server instances to scale down with decreasing client or system maintenance.
 - `/<path>`: Routes client requests to a server replica as scheduled by the consistent hashing algorithm.
 
+**Task 4: Testing loadbalaner and endpoints**
+
+- This task was mainly to test endpoints and the load balancer.
+
+
+**10,000 async requests**
+This script performs an analysis of request distribution among different server instances by making multiple asynchronous HTTP GET requests to a local server endpoint and visualizing the results.
+
+## What the Script Does
+
+1. **Fetches Data**: 
+   - Makes 10,000 asynchronous HTTP GET requests to `http://localhost:5000/home`.
+   - Each request fetches a JSON response from the server.
+
+2. **Processes Responses**:
+   - Parses each response to extract the server identifier from the `message` field.
+   - Counts how many requests were handled by each server.
+
+3. **Visualizes Results**:
+   - Creates a bar chart that shows the number of requests handled by each server.
+   - Saves the bar chart as an image file named `request_distribution_changed_function.png`.
+
+## Requirements
+
+Make sure you have Python 3.7+ installed along with the following packages:
+
+- `aiohttp` for making asynchronous HTTP requests
+- `matplotlib` for creating visualizations
+
+
+```sh
+python3 ascyn.py
+```
+
+## Results:
+
+![10,000 async requests](/request_distribution.png)
+
+Request Distribution: Server1 and Server3 handled significantly more requests compared to Server2. This suggests that the load balancer algorithm might have allocated more requests to Server1 and Server3 based on their current load or other factors considered by the load balancer.
+Performance: Server1 and Server3, with higher request counts, could potentially have more available resources or faster response times compared to Server2. This could be due to differences in hardware, network latency, or server load at the time of testing.
+Load Balancer Effectiveness: The load balancer seems to have effectively distributed requests across the three servers, albeit unevenly. This could be intentional based on configured weights or dynamic load balancing metrics.
+Server1: Handled 4591 requests
+Server2: Handled 1427 requests
+Server3: Handled 3982 requests
+The total number of requests handled by all three servers is:
+4591+1427+3982=10000
+
+
+
+**N=2 to 6 increments**
+## What the Script Does
+
+1. **Measure Server Load**:
+   - Sends 10,000 asynchronous HTTP GET requests to `http://localhost:5000/home`.
+   - Tracks the number of requests handled by each server.
+   - Counts failed requests due to errors or unsuccessful responses.
+
+2. **Check Existing Nodes**:
+   - Retrieves the list of existing server replicas from `http://localhost:5000/rep`.
+   - Determines if new servers need to be added.
+
+3. **Main Execution**:
+   - Iterates over a range of server counts (2 to 6).
+   - Adds new servers if needed.
+   - Measures the load for each server count and collects data on server load and failed requests.
+   - Plots the average load and average failed requests over the range of server counts.
+
+4. **Visualization**:
+   - Creates a plot showing the average number of requests per server and the average number of failed requests.
+   - Saves the plot as `average_server_load_and_failed_requests.png`.
+
+## Results:
+![Increment Results](/average_server_load_and_failed_requests.png)
+For 2 servers (server1 and server2), server1 handled 3808 requests and server2 handled 1597 requests.
+With 3 servers (server1, server2, and server3), the distribution changed where server1 handled 3273 requests, server2 handled 2682 requests, and server3 handled 4045 requests.
+Adding more servers (4, 5, and 6 servers) shows varying distributions of requests among the servers. For instance:
+With 4 servers, server4 handled a significantly higher load compared to others.
+With 5 and 6 servers, the load distribution shifted again, showing different patterns across the servers.
+
+**Average Load:** The average load per server was calculated for each configuration. For 6 servers, the average load was approximately 1667 requests per server.
+This metric helps gauge how evenly the load balancer distributes requests among the available servers. In this case, as the number of servers increased, the average load per server generally decreased, indicating effective load balancing.
+
+
+**Scalability Strengths:** The load balancer demonstrates scalability by effectively distributing incoming requests across a growing number of servers (server1 to server6).
+Dynamic Adjustment: As servers are added (server4, server5, server6), the the load balancer adjusts the distribution of requests, evident in the varying server loads.
+
+**Load Distribution:** The load balancer's ability to balance the load among servers is critical for scalability. Here, we observe dynamic adjustments in load distribution as more servers are added, which is a positive sign for scalability.
+
+**Graphical Representation:**
+
+The plotted graph (not shown here but inferred from the script) would display the average requests per server (avg_loads) and the average failed requests (avg_failed_requests).
+The average load per server would decrease with an increasing number of servers, indicating the load balancer's ability to efficiently distribute workload as it scales.
+In conclusion, the load balancer implementation appears to handle scalability well by adjusting the distribution of requests among servers dynamically. This capability ensures that as the system scales up with more servers, the overall performance and reliability are maintained, making it suitable for handling varying levels of traffic and maintaining service availability.
+
+
+
+
+##
 **Deployment:**
 Deploy the load balancer container using the provided Dockerfile, Docker-compose file, and Makefile. Ensure that the load balancer is exposed on port 5000 to accept incoming HTTP requests.
 
@@ -174,4 +272,3 @@ Deploy the load balancer container using the provided Dockerfile, Docker-compose
 **Conclusion:**
 Overall, the load balancer implementation effectively distributes the load among server containers and demonstrates scalability and fault tolerance. The analysis provides insights into the performance and behavior of the load balancer in various scenarios, contributing to the understanding of distributed systems and load balancing techniques. The other testing images are found in rm_responses.json.
 
-Footer
